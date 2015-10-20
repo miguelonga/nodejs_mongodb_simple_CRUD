@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+    h1.
+        #{title}
+    form#formAddBike(name="addbike",method="post",action="/bikes")
+        p Name: 
+            input#inputName(type="text", placeholder="ex. John Smith", name="name")
+        p Price:
+            input#inputBadge(type="number", placeholder="ex. 123456", name="price")
+        p Description:
+            textarea#inputBadge(type="text", placeholder="Description", name="description", rows="7")
+        p DOB: 
+            input#inputDob(type="date", name="dob")
+        p Is sold?: 
+            input#inputIsLoved(type="checkbox", name="issold")
+        p
+            button#btnSubmit(type="submit") submit
